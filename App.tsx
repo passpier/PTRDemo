@@ -27,6 +27,8 @@ export class App extends Component<AppProps, AppState> {
         </View>
         <PullToRefreshView
           minPullDistance={70}
+          pullAnimHeight={70}
+          pullAnimYValues={{from: -50, to: 10}}
           isRefreshing={this.state.isRefreshing}
           onRefresh={this.onInnerRefresh}
           onTriggerToRefresh={this.onTriggerToRefresh}
