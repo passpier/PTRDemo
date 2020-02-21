@@ -1,6 +1,6 @@
 import {autobind} from "core-decorators";
 import React, {Component} from "react";
-import {ScrollView, StyleSheet, Text, View} from "react-native";
+import {SafeAreaView, ScrollView, StyleSheet, Text, View} from "react-native";
 import {PullToRefreshView} from "react-native-smooth-pull-to-refresh";
 import {RefreshView} from "./RefreshView";
 
@@ -21,7 +21,7 @@ export class App extends Component<AppProps, AppState> {
 
   public render() {
     return (
-      <View style={styles.container}>
+      <SafeAreaView style={styles.container}>
         <View style={{height: 64, backgroundColor: "#24bdd8"}}>
           <Text style={{top: 35, fontWeight: "bold", fontSize: 18, color: "white", textAlign: "center"}}>Header</Text>
         </View>
@@ -42,7 +42,7 @@ export class App extends Component<AppProps, AppState> {
         >
           <RefreshView title={this.state.title}/>
         </PullToRefreshView>
-      </View>
+      </SafeAreaView>
     );
   }
 
